@@ -1,0 +1,110 @@
+<!-- app.component.html -->
+
+
+<main>
+  <!-- Introduction Section -->
+  <section id="introduction" class="py-5 bg-dark text-light">
+    <div class="container text-center">
+      <h2>Welcome to Portfolio Maker App</h2>
+      <hr>
+      <p class="lead">
+        With our Portfolio Maker App, you can easily create a professional portfolio just by entering your data. No more complex formatting or design work required!
+      </p>
+      <div class="steps">
+        <h3 class="mb-2">Follow these simple steps to make your portfolio:</h3>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card h-100 bg-primary rounded p-4 text-center text-white">
+              <i class="fas fa-pencil-alt"></i>
+              <p class="lead">Enter your personal, education, and work details in the form.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100 bg-success rounded p-4 text-center text-white">
+              <i class="fas fa-mouse-pointer"></i>
+              <p class="lead">Click the "CREATE PORTFOLIO" button.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100 bg-info rounded p-4 text-center text-white">
+              <i class="fas fa-file-pdf"></i>
+              <p class="lead">Download your portfolio as a PDF file.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="lead mt-3">
+        Start showcasing your skills and experiences today with our easy-to-use Portfolio Maker App.
+      </p>
+      <button class="btn btn-primary btn-lg mt-4" routerLink="form">Get Started</button>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-5">
+    <div class="container">
+      <h2 class="text-center">About</h2>
+      <hr>
+      <div class="row">
+        <div class="col-md-6">
+          <img src='https://source.unsplash.com/random/1920x1080/?about' alt="About Image" class="img-fluid">
+        </div>
+        <div class="col-md-6">
+          <h3>About Portfolio Maker App</h3>
+          <p>
+            Portfolio Maker App is a user-friendly platform designed to help individuals create professional portfolios
+            with ease. Whether you're a student, freelancer, or professional, our app makes it simple to showcase your
+            skills, education, work experience, and projects in an attractive format.
+          </p>
+          <p>
+            With our app, you can easily enter your personal details, education history, work experience, and skills
+            through a straightforward form. Once you've entered your data, click the "CREATE PORTFOLIO" button, and our
+            app will generate a beautifully designed PDF portfolio for you to download and share with potential clients,
+            employers, or colleagues.
+          </p>
+          <p>
+            We understand the importance of a well-crafted portfolio in making a lasting impression. That's why we
+            designed our app to be simple yet powerful, allowing you to focus on showcasing your achievements and
+            expertise without worrying about complex formatting or design work.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+   <!-- Contact Section -->
+   <section id="contact" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center">Contact</h2>
+      <hr>
+      <div class="row">
+        <div class="col-md-6">
+          <form>
+            <div class="form-group">
+              <label for="name">Name:</label>
+              <input type="text" id="name" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" id="email" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Message:</label>
+              <textarea id="message" class="form-control" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary mt-3">Submit</button>
+          </form>
+        </div>
+        <div class="col-md-6">
+          <img src="https://source.unsplash.com/random/1920x1080/?contact" alt="Contact Image" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="py-4 bg-dark text-white">
+  <div class="container text-center">
+    &copy; 2023 Your Portfolio Maker App. All rights reserved.
+  </div>
+</footer>

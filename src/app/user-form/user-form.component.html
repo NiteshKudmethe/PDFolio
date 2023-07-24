@@ -1,0 +1,158 @@
+<form (ngSubmit)="onSubmit()" class="container mt-4" #portfolioForm="ngForm">
+  <h2>Portfolio Details Form</h2>
+  <p>Use this form to add your portfolio details and create a PDF version.</p>
+
+  <mat-horizontal-stepper>
+    <!-- Step 1 -->
+    <mat-step>
+      <ng-template matStepLabel>Personal Details</ng-template>
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" [(ngModel)]="user.name" name="name" required class="form-control" #nameInput="ngModel">
+        <div *ngIf="nameInput.invalid && (nameInput.dirty || nameInput.touched)" class="text-danger">
+          Name is required.
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="address">Address:</label>
+        <textarea id="address" [(ngModel)]="user.address" name="address" required class="form-control"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="phoneNumber">Phone Number:</label>
+        <input type="tel" id="phoneNumber" [(ngModel)]="user.phoneNumber" name="phoneNumber" required class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" [(ngModel)]="user.email" name="email" required class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="linkedin">LinkedIn Profile:</label>
+        <input type="text" id="linkedin" [(ngModel)]="user.linkedin" name="linkedin" required class="form-control">
+      </div>
+    </mat-step>
+
+    <!-- Step 2 -->
+    <mat-step>
+      <ng-template matStepLabel>Education Details</ng-template>
+      <!-- <div class="form-group">
+        <label for="education">Education:</label>
+        <textarea id="education" [(ngModel)]="user.education" name="education" required class="form-control" #educationInput="ngModel"></textarea>
+        <div *ngIf="educationInput.invalid && (educationInput.dirty || educationInput.touched)" class="text-danger">
+          Education details are required.
+        </div>
+      </div> -->
+      <div class="form-group">
+        <label for="masterDegree">Master Degree:</label>
+        <input type="text" id="masterDegree" [(ngModel)]="user.masterDegree" name="masterDegree" required class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="masterPassingYear">Master Degree Passing Year:</label>
+        <input type="text" id="masterPassingYear" [(ngModel)]="user.masterPassingYear" name="masterPassingYear" required class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="masterUniversity">Master Degree University/College Name:</label>
+        <input type="text" id="masterUniversity" [(ngModel)]="user.masterUniversity" name="masterUniversity" required class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="masterPercentage">Master Degree Percentage:</label>
+        <input type="text" id="masterPercentage" [(ngModel)]="user.masterPercentage" name="masterPercentage" required class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="masterAcademicYears">Master Degree Academic Years:</label>
+        <input type="text" id="masterAcademicYears" [(ngModel)]="user.masterAcademicYears" name="masterAcademicYears" required class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="bachelorDegree">Bachelor Degree:</label>
+        <input type="text" id="bachelorDegree" [(ngModel)]="user.bachelorDegree" name="bachelorDegree" required class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="bachelorPassingYear">Bachelor Degree Passing Year:</label>
+        <input type="text" id="bachelorPassingYear" [(ngModel)]="user.bachelorPassingYear" name="bachelorPassingYear" required class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="bachelorUniversity">Bachelor Degree University/College Name:</label>
+        <input type="text" id="bachelorUniversity" [(ngModel)]="user.bachelorUniversity" name="bachelorUniversity" required class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="bachelorPercentage">Bachelor Degree Percentage:</label>
+        <input type="text" id="bachelorPercentage" [(ngModel)]="user.bachelorPercentage" name="bachelorPercentage" required class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="bachelorAcademicYears">Bachelor Degree Academic Years:</label>
+        <input type="text" id="bachelorAcademicYears" [(ngModel)]="user.bachelorAcademicYears" name="bachelorAcademicYears" required class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="twelfth">12th:</label>
+        <input type="text" id="twelfth" [(ngModel)]="user.twelfth" name="twelfth" required class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="twelfthPassingYear">12th Passing Year:</label>
+        <input type="text" id="twelfthPassingYear" [(ngModel)]="user.twelfthPassingYear" name="twelfthPassingYear" required class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="twelfthUniversity">12th University/College Name:</label>
+        <input type="text" id="twelfthUniversity" [(ngModel)]="user.twelfthUniversity" name="twelfthUniversity" required class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="twelfthPercentage">12th Percentage:</label>
+        <input type="text" id="twelfthPercentage" [(ngModel)]="user.twelfthPercentage" name="twelfthPercentage" required class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="twelfthAcademicYears">12th Academic Years:</label>
+        <input type="text" id="twelfthAcademicYears" [(ngModel)]="user.twelfthAcademicYears" name="twelfthAcademicYears" required class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="tenth">10th:</label>
+        <input type="text" id="tenth" [(ngModel)]="user.tenth" name="tenth" required class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="tenthPassingYear">10th Passing Year:</label>
+        <input type="text" id="tenthPassingYear" [(ngModel)]="user.tenthPassingYear" name="tenthPassingYear" required class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="tenthUniversity">10th School Name:</label>
+        <input type="text" id="tenthUniversity" [(ngModel)]="user.tenthUniversity" name="tenthUniversity" required class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="tenthPercentage">10th Percentage:</label>
+        <input type="text" id="tenthPercentage" [(ngModel)]="user.tenthPercentage" name="tenthPercentage" required class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="tenthAcademicYears">10th Academic Years:</label>
+        <input type="text" id="tenthAcademicYears" [(ngModel)]="user.tenthAcademicYears" name="tenthAcademicYears" required class="form-control">
+      </div>
+    </mat-step>
+
+    <!-- Step 3 -->
+    <mat-step>
+      <ng-template matStepLabel>Work Experience & Skills</ng-template>
+      <div class="form-group">
+        <label for="workExperience">Work Experience:</label>
+        <textarea id="workExperience" [(ngModel)]="user.workExperience" name="workExperience" required class="form-control" #workExperienceInput="ngModel"></textarea>
+        <div *ngIf="workExperienceInput.invalid && (workExperienceInput.dirty || workExperienceInput.touched)" class="text-danger">
+          Work experience details are required.
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="skills">Skills:</label>
+        <textarea id="skills" [(ngModel)]="user.skills" name="skills" required class="form-control"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="projects">Projects:</label>
+        <textarea id="projects" [(ngModel)]="user.projects" name="projects" required class="form-control"></textarea>
+      </div>
+      <!-- Add more work experience and skills fields here -->
+    </mat-step>
+  </mat-horizontal-stepper>
+
+  <!-- Submit button -->
+  <div *ngIf="portfolioForm.valid" class="text-center">
+    <button type="submit" mat-button class="btn btn-success mt-3">
+      <i class="fas fa-plus"></i> Create Portfolio
+    </button>
+
+
+  </div>
+
+
+</form>

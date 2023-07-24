@@ -1,0 +1,15 @@
+/* Add custom styles for the form */
+.container {
+  max-width: 600px;
+  margin: auto;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.text-danger {
+  color: red;
+}
+
+/* Optional: Add more custom styling as per your design requirements */
